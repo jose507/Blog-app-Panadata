@@ -1,0 +1,22 @@
+<div class="well col-xs-8 col-xs-offset-2">
+<%= form_with(model: [ @article, @article.comments.build ], local: true) do |form| %>
+   
+  <div>
+  <p>
+      <%= form.label :Autor %><br>
+      <%= form.text_field :Autor%>
+    </p>
+  </div>
+  
+    <p>
+      <%= form.label :Texto %><br>
+      <%= form.text_area :Texto %>
+    </p>
+ 
+    <p>
+      <%= form.submit %>
+    </p>
+    <%= link_to 'Editar', edit_article_path(@article), class: "btn btn-primary btn-lg btn-block" %> 
+    <%= link_to 'Atrás', articles_path, class: "btn  btn-danger btn-lg btn-block" %>
+  <% end %>
+</div>

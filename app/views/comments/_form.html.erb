@@ -2,9 +2,11 @@
 <%= form_with(model: [ @article, @article.comments.build ], local: true) do |form| %>
    
   <div>
-  <p>
-      <%= form.label :Autor %><br>
-      <%= form.text_field :Autor%>
+  <p> 
+      <div class="article-meta-details">
+      <small>Usuario: <%= @article.user.email if @article.user %>
+      </small>
+      </div>
     </p>
   </div>
   

@@ -1,7 +1,9 @@
 
 <p>
-<strong>Commenter:</strong>
-<%= comment.commenter %>
+<div class="article-meta-details">
+<small>Usuario: <%= @article.user.email if @article.user %>
+</small>
+</div>
 </p>
 
 <p>

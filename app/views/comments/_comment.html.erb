@@ -1,0 +1,21 @@
+
+<p>
+<div class="article-meta-details">
+<small>Usuario: <%= @article.user.email if @article.user %>
+</small>
+</div>
+</p>
+
+<p>
+<strong>Comment:</strong>
+<%= comment.body %>
+</p>
+
+<p>
+<%= link_to 'Destroy Comment', [comment.article, comment],
+             method: :delete,
+             data: { confirm: 'Are you sure?' } %>
+             
+
+             
+</p>

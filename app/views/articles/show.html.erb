@@ -1,0 +1,21 @@
+<center><h1><strong>Titulo:</strong>
+<%= @article.title %></h1></center>
+
+<div class="well col-xs-8 col-xs-offset-2 shadow">
+
+<p>
+<strong>Texto:</strong>
+<br>
+<%= @article.text %>
+</p>
+
+<h2>Comentarios:</h2>
+
+<%= render @article.comments %>
+
+<h3>Agrega un comentario</h3>
+<%= render 'comments/form' %>
+
+
+
+</div>

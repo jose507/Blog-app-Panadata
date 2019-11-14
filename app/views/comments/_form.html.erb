@@ -1,0 +1,24 @@
+<div class="well col-xs-8 col-xs-offset-2">
+<%= form_with(model: [ @article, @article.comments.build ], local: true) do |form| %>
+   
+  <div>
+  <p> 
+      <div class="article-meta-details">
+      <small>Usuario: <%= @article.user.email if @article.user %>
+      </small>
+      </div>
+    </p>
+  </div>
+  
+    <p>
+      <%= form.label :Texto %><br>
+      <%= form.text_area :Texto %>
+    </p>
+ 
+    <p>
+      <%= form.submit %>
+    </p>
+    <%= link_to 'Editar', edit_article_path(@article), class: "btn btn-primary btn-lg btn-block" %> 
+    <%= link_to 'Atrás', articles_path, class: "btn  btn-danger btn-lg btn-block" %>
+  <% end %>
+</div>

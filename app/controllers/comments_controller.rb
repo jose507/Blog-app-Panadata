@@ -11,7 +11,6 @@ class CommentsController < ApplicationController
       @comment.save
 
       if @comment.save
-        UserMailer.newcomment_email(@comment).deliver 
         redirect_to article_path(@article)
       else
         render 'new'

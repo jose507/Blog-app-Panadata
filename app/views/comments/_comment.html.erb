@@ -1,9 +1,7 @@
 
 <p>
-<div class="article-meta-details">
-<small>Usuario: <%= @article.user.email if @article.user %>
-</small>
-</div>
+<strong>Commenter:</strong>
+<%= current_user.email %>
 </p>
 
 <p>

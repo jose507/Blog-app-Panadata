@@ -4,6 +4,6 @@ class UserMailer < ActionMailer::Base
     def newcomment_email(comment)
       @comment = comment
   
-      mail(to: comment.micropost.user.email, subject: "New Comment Notify")
+      mail(to: @user.email, subject: "New Comment Notify")
     end 
   end

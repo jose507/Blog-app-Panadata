@@ -4,15 +4,15 @@
   <div>
   <p> 
       <div class="article-meta-details">
-      <small>Usuario: <%= @article.user.email if @article.user %>
+      <small>Usuario: <%= current_user.nombre if current_user %>
       </small>
       </div>
     </p>
   </div>
   
     <p>
-      <%= form.label :Texto %><br>
-      <%= form.text_area :Texto %>
+      <%= form.label :body %><br>
+      <%= form.text_area :body %>
     </p>
  
     <p>

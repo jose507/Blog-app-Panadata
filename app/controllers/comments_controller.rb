@@ -7,7 +7,7 @@ class CommentsController < ApplicationController
       
       
       @comment = @article.comments.create(comment_params)
-      @article.comment.user = current_user
+      @user = current_user
 
       if @comment.save
         redirect_to article_path(@article)

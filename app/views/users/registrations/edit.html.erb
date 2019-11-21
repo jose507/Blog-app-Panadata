@@ -11,7 +11,7 @@
   </div>
   
   <div><%= f.label :Fecha_de_nacimiento %><br />
-        <%= f.date_select :fecha_nacimiento %></div>
+   <%= date_field(:user, :fecha_nacimiento) %></div>
 
   <div><%= f.label :Ciudad %><br />
         <%= f.text_field :ciudad, autofocus: true %>

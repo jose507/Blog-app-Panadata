@@ -5,7 +5,10 @@ class ArticlesController < ApplicationController
     end
 
     def show
+        @user = current_user
         @article = Article.find(params[:id])
+
+
         
     end
 

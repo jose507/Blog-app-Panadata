@@ -17,11 +17,25 @@
         <li><%= link_to "Articulos", articles_path %></li>
         <li><%= link_to "Crear Articulo", new_article_path %></li>
         
+        <li class="">
+        <div class="input-group">
+        <%= form_tag(articles_path, :method => "get", id: "search-form") do %>
+          <%= text_field_tag :search, params[:search], placeholder: "Search Posts", class: 'form-control' %>
+          <span class="input-group-btn">
+            <%= submit_tag "Search", class: 'btn btn-default' %>
+          </span>
+        <% end %>
+      </div></li>  
       
+       
+
+
       <ul class="nav navbar-nav navbar-right">
       <p class="navbar-text float-right">
+      
       <% if user_signed_in? %>
       Logged in as <strong><%= current_user.email %></strong>.
+      <%= link_to "Ver Perfil", current_user %> |
       <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
       <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
       <% else %>

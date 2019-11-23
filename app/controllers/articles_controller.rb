@@ -1,11 +1,13 @@
 class ArticlesController < ApplicationController
     def index
         @articles= Article.all
+        @articles = Article.search(params[:search])
     end
 
     def show
         @article = Article.find(params[:id])
-        
+        @user = User.find(params[:id])
+        @commentuser = current_user
     end
 
     def new
@@ -18,7 +20,7 @@ class ArticlesController < ApplicationController
 
     def create
         @article = Article.new(article_params)
-        @article.user = User.first
+        @article.user = current_user
        
         if @article.save
         redirect_to @article

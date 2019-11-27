@@ -16,9 +16,17 @@
     </p>
  
     <p>
-      <%= form.submit %>
+      <%= form.submit%>
     </p>
-    <%= link_to 'Editar', edit_article_path(@article), class: "btn btn-primary btn-lg btn-block" %> 
-    <%= link_to 'Atrás', articles_path, class: "btn  btn-danger btn-lg btn-block" %>
+    <center>
+    <div class="text-center">
+    
+    
+    <%= link_to 'Editar', edit_article_path(@article), class: "btn btn-primary btn-lg btn-block boton " %> 
+    <br>
+    
+    <%= link_to 'Atrás', articles_path, class: "btn  btn-danger btn-lg btn-block boton responsive" %>
   <% end %>
-</div>
+  
+ 
+  </div>

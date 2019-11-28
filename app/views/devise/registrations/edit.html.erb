@@ -1,5 +1,4 @@
 
-<center><h2>Edit <%= resource_name.to_s.humanize %></h2></center>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
@@ -19,16 +18,12 @@
       </div></hr><br>
 
                
-          <div class="panel panel-default">
-            <div class="panel-heading">Website <i class="fa fa-link fa-1x"></i></div>
-            <div class="panel-body"><a href="http://bootnipets.com">bootnipets.com</a></div>
-          </div>
           
           
           <ul class="list-group">
             <li class="list-group-item text-muted">Actividad del blog <i class="fa fa-dashboard fa-1x"></i></li>
-            <li class="list-group-item text-right"><span class="pull-left"><strong>Articulos</strong></span> 125</li>
-            <li class="list-group-item text-right"><span class="pull-left"><strong>Comentarios</strong></span> 13</li>
+            <li class="list-group-item text-right"><span class="pull-left"><strong>Articulos</strong></span> <%= @user.articles.count %></li>
+            <li class="list-group-item text-right"><span class="pull-left"><strong>Comentarios</strong></span> <%= @user.comments.count %></li>
             </ul> 
                
           

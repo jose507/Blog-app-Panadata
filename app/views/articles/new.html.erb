@@ -1,4 +1,4 @@
-<center><h1 class="titulo">Nuevo Articulo</h1></center>
+<center><h1 class="titulo black fuente ">Nuevo Articulo</h1></center>
 <br>
 
 
@@ -7,7 +7,7 @@
 
 <%= form_with scope: :article, url: articles_path, local: true do |form| %>
     <% text_field_tag :search , @search_term, placeholder: "buscar"%>
-<%= link_to 'Atrás', articles_path, class: "btn btn-danger btn-lg center-block atras" %> 
+
 <% end %>
 </div>
 

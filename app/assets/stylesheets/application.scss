@@ -15,7 +15,7 @@
  */
 
  
- $navbar-default-bg:#D1913C ;
+ $navbar-default-bg: black ;
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
@@ -35,7 +35,7 @@
  font-family: 'Raleway', sans-serif;
 }
 #logo:hover {
- color: black;
+ color: white;
  text-decoration: none;
 }
 .article-actions {
@@ -81,17 +81,16 @@
 
 
 body{
-background: #00B4DB; 
-background: -webkit-linear-gradient(to right, #0083B0, #00B4DB);  
-background: linear-gradient(to right, #0083B0, #00B4DB); 
-    
+ 
+    background-color: white;
+   
 
 }
 h1{
     color:white;
 }
 p{
-    color:black;
+    color:black;    
 }
 .titulo{
     margin: 50px 0 20px 0 ;
@@ -105,6 +104,10 @@ p{
 }
 .black{
     color:black;
+    margin-bottom: 40px;
+}
+.margin{
+    margin-top: 8px;
 }
 .article-meta-details {
     border-top: 1px solid #eaeaea;

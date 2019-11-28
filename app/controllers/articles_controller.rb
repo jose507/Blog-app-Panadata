@@ -6,7 +6,7 @@ class ArticlesController < ApplicationController
 
     def show
         @article = Article.find(params[:id])
-        @user = User.find(params[:id])
+        @user = current_user
         @commentuser = current_user
     end
 

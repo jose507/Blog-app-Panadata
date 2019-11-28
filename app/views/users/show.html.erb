@@ -21,8 +21,14 @@
           
           <ul class="list-group">
             <li class="list-group-item text-muted">Actividad del blog <i class="fa fa-dashboard fa-1x"></i></li>
-            <li class="list-group-item text-right"><span class="pull-left"><strong>Articulos</strong></span> 125</li>
-            <li class="list-group-item text-right"><span class="pull-left"><strong>Comentarios</strong></span> 13</li>
+            <li class="list-group-item text-right"><span class="pull-left"><strong>Articulos</strong></span> <%= @user.articles.count %></li>
+            <li class="list-group-item text-right"><span class="pull-left"><strong>Comentarios</strong></span> <%= @user.comments.count %></li>
+            </ul> 
+
+            <ul class="list-group">
+                <li class="list-group-item text-muted">Lista de comentarios <i class="fa fa-dashboard fa-1x"></i></li>
+
+                <li class="list-group-item text-muted"><%= render 'shared/listac', obj: @user.comments %><i class="fa fa-dashboard fa-1x"></i></li>
             </ul> 
                
           
@@ -69,9 +75,11 @@
             <%= @user.fecha_nacimiento %>
         </div>
     </div>
-    <h4 align="center">Los articulos de <%= @user.nombre %> .</h4>
+    <h4 align="center">Articulos creados </h4>
 
     <%= render 'shared/article', obj: @user.articles %>
+
+    <h4 align="center">Ultimos 3 comentarios creados </h4>
     <%= render 'shared/comment', obj: @user.comments %>
               
             

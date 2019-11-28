@@ -44,7 +44,7 @@
       
       <% if user_signed_in? %>
       Logged in as <strong><%= current_user.nombre %></strong>.
-      <%= link_to "Ver Perfil", current_user %> |
+      <%= link_to "Ver Perfil", current_user, :class => 'navbar-link' %> |
       <%= link_to 'Editar Perfil', edit_user_registration_path, :class => 'navbar-link' %> |
       <%= link_to "Cerrar Sesión", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
       <% else %>

@@ -18,6 +18,11 @@
  $navbar-default-bg: black ;
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+
+/*
+ *= require rails_bootstrap_forms
+ */
 #logo {
  float: left;
  font-size: 2.0em;
@@ -101,43 +106,40 @@ p{
     color:black;
     margin-bottom: 40px;
 }
+.margin{
+    margin-top: 8px;
+}
 .article-meta-details {
     border-top: 1px solid #eaeaea;
     margin-top: 15px;
    }
-
-.margin1{
-    margin-top:10px;
-    width: 250px;
-    
+   .divider-text {
+    position: relative;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.divider-text span {
+    padding: 7px;
+    font-size: 12px;
+    position: relative;   
+    z-index: 2;
+}
+.divider-text:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    border-bottom: 1px solid #ddd;
+    top: 55%;
+    left: 0;
+    z-index: 1;
 }
 
-.margin2{
-    margin-top: 3px;
-    margin-right: 10px;
+.btn-facebook {
+    background-color: #405D9D;
+    color: #fff;
 }
-
-.boton{
-    
+.btn-twitter {
+    background-color: #42AEEC;
+    color: #fff;
 }
-
-.justify{
-    text-align: justify;
-}
-.fuente{
-    font-family: 'Raleway', sans-serif;
-}
-.grey{
-    color: grey;
-}
-
-@media (max-width: 768px) {
-
-    .reponsive {
-        width:50px;
-    }
-
-
-
-}
-

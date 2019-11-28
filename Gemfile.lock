@@ -64,9 +64,14 @@ GEM
     bindex (0.8.1)
     bootsnap (1.4.5)
       msgpack (~> 1.0)
+    bootstrap-datepicker-rails (1.8.0.1)
+      railties (>= 3.0)
     bootstrap-sass (3.4.1)
       autoprefixer-rails (>= 5.2.1)
       sassc (>= 2.0.0)
+    bootstrap_form (4.3.0)
+      actionpack (>= 5.0)
+      activemodel (>= 5.0)
     builder (3.2.3)
     byebug (11.0.1)
     capybara (3.29.0)
@@ -217,7 +222,9 @@ PLATFORMS
 
 DEPENDENCIES
   bootsnap (>= 1.4.2)
+  bootstrap-datepicker-rails
   bootstrap-sass (~> 3.4.1)
+  bootstrap_form
   byebug
   capybara (>= 2.15)
   devise
